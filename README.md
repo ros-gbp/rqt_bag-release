@@ -1,3 +1,28 @@
+## rqt_bag (lunar) - 0.4.11-0
+
+The packages in the `rqt_bag` repository were released into the `lunar` distro by running `/usr/bin/bloom-release -r lunar -t lunar rqt_bag` on `Wed, 01 Nov 2017 16:50:24 -0000`
+
+These packages were released:
+- `rqt_bag`
+- `rqt_bag_plugins`
+
+Version of package(s) in repository `rqt_bag`:
+
+- upstream repository: https://github.com/ros-visualization/rqt_bag.git
+- release repository: https://github.com/ros-gbp/rqt_bag-release.git
+- rosdistro version: `0.4.10-0`
+- old version: `0.4.10-0`
+- new version: `0.4.11-0`
+
+Versions of tools used:
+
+- bloom version: `0.6.1`
+- catkin_pkg version: `0.3.8`
+- rosdep version: `0.11.8`
+- rosdistro version: `0.6.2`
+- vcstools version: `0.1.39`
+
+
 ## rqt_bag (kinetic) - 0.4.10-0
 
 The packages in the `rqt_bag` repository were released into the `kinetic` distro by running `/usr/bin/bloom-release -r kinetic -t kinetic rqt_bag` on `Wed, 25 Oct 2017 18:11:14 -0000`
