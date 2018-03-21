@@ -1,3 +1,28 @@
+## rqt_bag (melodic) - 0.4.11-0
+
+The packages in the `rqt_bag` repository were released into the `melodic` distro by running `/usr/bin/bloom-release -r melodic -t melodic rqt_bag` on `Wed, 21 Mar 2018 18:10:04 -0000`
+
+These packages were released:
+- `rqt_bag`
+- `rqt_bag_plugins`
+
+Version of package(s) in repository `rqt_bag`:
+
+- upstream repository: https://github.com/ros-visualization/rqt_bag.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `None-0`
+- new version: `0.4.11-0`
+
+Versions of tools used:
+
+- bloom version: `0.6.2`
+- catkin_pkg version: `0.4.1`
+- rosdep version: `0.12.1`
+- rosdistro version: `0.6.8`
+- vcstools version: `0.1.40`
+
+
 ## rqt_bag (kinetic) - 0.4.11-0
 
 The packages in the `rqt_bag` repository were released into the `kinetic` distro by running `/usr/bin/bloom-release -r kinetic -t kinetic rqt_bag` on `Wed, 01 Nov 2017 16:52:37 -0000`
