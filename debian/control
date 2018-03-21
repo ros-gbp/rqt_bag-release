@@ -1,0 +1,12 @@
+Source: ros-lunar-rqt-bag-plugins
+Section: misc
+Priority: extra
+Maintainer: Dirk Thomas <dthomas@osrfoundation.org>
+Build-Depends: debhelper (>= 9.0.0), ros-lunar-catkin
+Homepage: http://wiki.ros.org/rqt_bag
+Standards-Version: 3.9.2
+
+Package: ros-lunar-rqt-bag-plugins
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python-cairo, python-imaging, ros-lunar-geometry-msgs, ros-lunar-rosbag, ros-lunar-roslib, ros-lunar-rospy, ros-lunar-rqt-bag, ros-lunar-rqt-gui, ros-lunar-rqt-gui-py, ros-lunar-rqt-plot, ros-lunar-sensor-msgs, ros-lunar-std-msgs
+Description: rqt_bag provides a GUI plugin for displaying and replaying ROS bag files.
