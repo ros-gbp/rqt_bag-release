@@ -259,12 +259,12 @@ class BagWidget(QWidget):
 
 
     def _handle_load_clicked(self):
-        filename = QFileDialog.getOpenFileName(self, self.tr('Load from File'), '.', self.tr('Bag files {.bag} (*.bag)'))
-        if filename[0] != '':
-            self.load_bag(filename[0])
+        filenames = QFileDialog.getOpenFileNames(self, self.tr('Load from Files'), '.', self.tr('Bag files {.bag} (*.bag)'))
+        for filename in filenames[0]:
+            self.load_bag(filename)
 
     def load_bag(self, filename):
-        qDebug("Loading '%s'..." % filename)
+        qDebug("Loading '%s'..." % filename.encode(errors='replace'))
 
         # QProgressBar can EITHER: show text or show a bouncing loading bar,
         #  but apparently the text is hidden when the bounding loading bar is
@@ -292,11 +292,11 @@ class BagWidget(QWidget):
             self.save_button.setEnabled(True)
             self.record_button.setEnabled(False)
             self._timeline.add_bag(bag)
-            qDebug("Done loading '%s'" % filename )
+            qDebug("Done loading '%s'" % filename.encode(errors='replace'))
             # put the progress bar back the way it was
             self.set_status_text.emit("")
         except rosbag.ROSBagException as e:
-            qWarning("Loading '%s' failed due to: %s" % (filename, e))
+            qWarning("Loading '%s' failed due to: %s" % (filename.encode(errors='replace'), e))
             self.set_status_text.emit("Loading '%s' failed due to: %s" % (filename, e))
 
         #self.progress_bar.setFormat(progress_format)
