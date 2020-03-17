@@ -40,7 +40,10 @@ import sys
 
 from PIL import Image
 from PIL import ImageOps
-import cairo
+try:
+    import cairo
+except ImportError:
+    import cairocffi as cairo
 
 
 def imgmsg_to_pil(img_msg, rgba=True):
@@ -74,11 +77,12 @@ def imgmsg_to_pil(img_msg, rgba=True):
                 alpha = True
             else:
                 raise Exception("Unsupported image format: %s" % img_msg.encoding)
-            pil_img = Image.frombuffer(pil_mode, (img_msg.width, img_msg.height), img_msg.data, 'raw', mode, 0, 1)
+            pil_img = Image.frombuffer(
+                pil_mode, (img_msg.width, img_msg.height), img_msg.data, 'raw', mode, 0, 1)
 
         # 16 bits conversion to 8 bits
         if pil_img.mode == 'F':
-            pil_img = pil_img.point(lambda i: i*(1./256.)).convert('L')
+            pil_img = pil_img.point(lambda i: i * (1. / 256.)).convert('L')
             pil_img = ImageOps.autocontrast(pil_img)
 
         if rgba and pil_img.mode != 'RGBA':
