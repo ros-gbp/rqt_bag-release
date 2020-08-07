@@ -2,6 +2,20 @@
 Changelog for package rqt_bag_plugins
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.4.14 (2020-08-07)
+-------------------
+* support 16-bit bayer images (`#45 <https://github.com/ros-visualization/rqt_bag/issues/45>`_)
+* maintain image aspect ratio (`#32 <https://github.com/ros-visualization/rqt_bag/issues/32>`_)
+* fix Python 3 issue: long/int (`#51 <https://github.com/ros-visualization/rqt_bag/issues/51>`_)
+* fix Python 3 issue: ensure str is encoded before decoding (`#50 <https://github.com/ros-visualization/rqt_bag/issues/50>`_)
+* bump CMake minimum version to avoid CMP0048 warning
+
+0.4.13 (2020-03-17)
+-------------------
+* add Python 3 conditional dependencies (`#44 <https://github.com/ros-visualization/rqt_bag/issues/44>`_)
+* add cairocffi as the fallback module (`#43 <https://github.com/ros-visualization/rqt_bag/issues/43>`_)
+* autopep8 (`#30 <https://github.com/ros-visualization/rqt_bag/issues/30>`_)
+
 0.4.12 (2018-03-21)
 -------------------
 
