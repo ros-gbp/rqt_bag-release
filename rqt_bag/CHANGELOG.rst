@@ -2,6 +2,18 @@
 Changelog for package rqt_bag
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.4.14 (2020-08-07)
+-------------------
+* save last directory opened to load a bag file (`#40 <https://github.com/ros-visualization/rqt_bag/issues/40>`_)
+* fix shebang line for Python 3 (`#48 <https://github.com/ros-visualization/rqt_bag/issues/48>`_)
+* bump CMake minimum version to avoid CMP0048 warning
+
+0.4.13 (2020-03-17)
+-------------------
+* fix Python 3 exception, wrap filter call in list() (`#46 <https://github.com/ros-visualization/rqt_bag/issues/46>`_)
+* add Python 3 conditional dependencies (`#44 <https://github.com/ros-visualization/rqt_bag/issues/44>`_)
+* autopep8 (`#30 <https://github.com/ros-visualization/rqt_bag/issues/30>`_)
+
 0.4.12 (2018-03-21)
 -------------------
 * add support for opening multiple bag files at once (`#25 <https://github.com/ros-visualization/rqt_bag/issues/25>`_)
