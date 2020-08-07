@@ -50,6 +50,7 @@ from python_qt_binding.QtWidgets import QGraphicsScene, QGraphicsView
 
 
 class ImageView(TopicMessageView):
+
     """
     Popup image viewer
     """
@@ -76,8 +77,10 @@ class ImageView(TopicMessageView):
 
     # MessageView implementation
     def _resizeEvent(self, event):
-        # TODO make this smarter. currently there will be no scrollbar even if the timeline extends beyond the viewable area
-        self._scene.setSceneRect(0, 0, self._image_view.size().width() - 2, self._image_view.size().height() - 2)
+        # TODO make this smarter. currently there will be no scrollbar even if the
+        # timeline extends beyond the viewable area
+        self._scene.setSceneRect(
+            0, 0, self._image_view.size().width() - 2, self._image_view.size().height() - 2)
         self.put_image_into_scene()
 
     def message_viewed(self, bag, msg_details):
@@ -98,7 +101,13 @@ class ImageView(TopicMessageView):
     # End MessageView implementation
     def put_image_into_scene(self):
         if self._image:
-            resized_image = self._image.resize((self._image_view.size().width() - 2, self._image_view.size().height() - 2), self.quality)
+            scale_factor = min(
+                float(self._image_view.size().width() - 2) / self._image.size[0],
+                float(self._image_view.size().height() - 2) / self._image.size[1])
+            resized_image = self._image.resize(
+                (int(scale_factor * self._image.size[0]),
+                 int(scale_factor * self._image.size[1])),
+                self.quality)
 
             QtImage = ImageQt(resized_image)
             pixmap = QPixmap.fromImage(QtImage)
