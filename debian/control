@@ -1,0 +1,12 @@
+Source: ros-melodic-rqt-bag
+Section: misc
+Priority: optional
+Maintainer: Dirk Thomas <dthomas@osrfoundation.org>
+Build-Depends: debhelper (>= 9.0.0), ros-melodic-catkin
+Homepage: http://wiki.ros.org/rqt_bag
+Standards-Version: 3.9.2
+
+Package: ros-melodic-rqt-bag
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python-rospkg, ros-melodic-python-qt-binding (>= 0.2.19), ros-melodic-rosbag, ros-melodic-rosgraph-msgs, ros-melodic-roslib, ros-melodic-rosnode, ros-melodic-rospy, ros-melodic-rqt-gui (>= 0.2.12), ros-melodic-rqt-gui-py
+Description: rqt_bag provides a GUI plugin for displaying and replaying ROS bag files.
