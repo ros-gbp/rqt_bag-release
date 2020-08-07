@@ -79,6 +79,11 @@ from rqt_plot.data_plot import DataPlot
 # rospy used for Time and Duration objects, for interacting with rosbag
 import rospy
 
+# compatibility fix for python2/3
+try:
+    long
+except NameError:
+    long = int
 
 class PlotView(MessageView):
 
@@ -450,7 +455,7 @@ class MessageTree(QTreeWidget):
 
         elif type(obj) in [str, bool, int, long, float, complex, rospy.Time]:
             # Ignore any binary data
-            obj_repr = codecs.utf_8_decode(str(obj), 'ignore')[0]
+            obj_repr = codecs.utf_8_decode(str(obj).encode(), 'ignore')[0]
 
             # Truncate long representations
             if len(obj_repr) >= 50:
