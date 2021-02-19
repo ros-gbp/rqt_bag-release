@@ -1,0 +1,12 @@
+Source: ros-noetic-rqt-bag
+Section: misc
+Priority: optional
+Maintainer: Mabel Zhang <mabel@openrobotics.org>
+Build-Depends: debhelper (>= 9.0.0), ros-noetic-catkin
+Homepage: http://wiki.ros.org/rqt_bag
+Standards-Version: 3.9.2
+
+Package: ros-noetic-rqt-bag
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python3-rospkg, ros-noetic-python-qt-binding (>= 0.2.19), ros-noetic-rosbag, ros-noetic-rosgraph-msgs, ros-noetic-roslib, ros-noetic-rosnode, ros-noetic-rospy, ros-noetic-rqt-gui (>= 0.2.12), ros-noetic-rqt-gui-py
+Description: rqt_bag provides a GUI plugin for displaying and replaying ROS bag files.
