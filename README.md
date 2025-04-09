@@ -1,3 +1,28 @@
+## rqt_bag (noetic) - 0.5.2-1
+
+The packages in the `rqt_bag` repository were released into the `noetic` distro by running `/usr/bin/bloom-release --rosdistro noetic rqt_bag` on `Wed, 09 Apr 2025 23:35:10 -0000`
+
+These packages were released:
+- `rqt_bag`
+- `rqt_bag_plugins`
+
+Version of package(s) in repository `rqt_bag`:
+
+- upstream repository: https://github.com/ros-visualization/rqt_bag.git
+- release repository: https://github.com/ros-gbp/rqt_bag-release.git
+- rosdistro version: `0.5.1-1`
+- old version: `0.5.1-1`
+- new version: `0.5.2-1`
+
+Versions of tools used:
+
+- bloom version: `0.12.0`
+- catkin_pkg version: `1.0.0`
+- rosdep version: `0.25.1`
+- rosdistro version: `1.0.1`
+- vcstools version: `0.1.42`
+
+
 ## rqt_bag (noetic) - 0.5.1-1
 
 The packages in the `rqt_bag` repository were released into the `noetic` distro by running `/usr/bin/bloom-release rqt_bag --rosdistro noetic` on `Fri, 19 Feb 2021 16:27:32 -0000`
