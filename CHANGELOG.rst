@@ -2,6 +2,11 @@
 Changelog for package rqt_bag_plugins
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.5.3 (2025-04-26)
+------------------
+* Bump cmake_minimum_required to avoid deprecation (`#172 <https://github.com/ros-visualization/rqt_bag/issues/172>`_)
+* Contributors: Arne Hitzmann
+
 0.5.2 (2025-04-09)
 ------------------
 * Import setup from setuptools instead of distutils.core (`#137 <https://github.com/ros-visualization/rqt_bag/issues/137>`_)
